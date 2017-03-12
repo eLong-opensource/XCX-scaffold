@@ -1,0 +1,38 @@
+{
+    "debug": false,
+    "pages": [
+        "pages/index/index",
+        "pages/users/index",
+        "pages/http/index",
+        "pages/externalComponent/index",
+        "pages/partComponent/index",
+        "pages/internalComponent/index",
+        "components/calendar/page/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "",
+        "navigationBarTextStyle": "black"
+    },
+    "networkTimeout": {
+        "request": 12000
+    },
+    "tabBar": {
+        "color": "#888888",
+        "selectedColor": "#3cc51f",
+        "borderStyle": "white",
+        "backgroundColor": "#ffffff",
+        "list": [{
+            "pagePath": "pages/index/index",
+            "iconPath": "image/home_icon1.png",
+            "selectedIconPath": "image/home_icon1_on.png",
+            "text": "首页"
+        }, {
+            "pagePath": "pages/users/index",
+            "iconPath": "image/home_icon2.png",
+            "selectedIconPath": "image/home_icon2_on.png",
+            "text": "个人中心"
+        }]
+    }
+}

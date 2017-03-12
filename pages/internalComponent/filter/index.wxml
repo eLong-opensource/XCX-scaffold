@@ -1,0 +1,8 @@
+<template name="filter">
+  <view class="st_mn pf" wx:if="{{ isOpen }}" style="top:{{ style.top }}">
+    <view class="bg pa" bindtap="{{ close }}" animation="{{ bgAnimation }}"></view>
+     <view class="st_mnc pa bg1 pd12" animation="{{ contentAnimation }}">
+       <view class="item tc bb1 t14 {{ item.id == selectedId ? 'cur' : '' }}" wx:for="{{ items }}" bindtap="{{ select }}" data-id="{{ item.id }}" data-name="{{ item.name }}">{{ item.name }}<i class="im_arr pa" style="top:{{ styTop }}"></i></view>
+     </view>
+ </view>
+</template>

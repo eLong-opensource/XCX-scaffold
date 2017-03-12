@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="usermotto">
+        <text class="user-motto">网络请求</text>
+    </view>
+    <view class="usermotto">
+        <view> 服务时间：
+            <text>{{serverDate}}</text>
+        </view>
+        <button type="default" size="default" bindtap="getServerDate" hover-class="other-button-hover"> 获取服务器时间 </button>
+    </view>
+</view>

@@ -1,0 +1,42 @@
+<view class="cal_mn">
+    <view class="cal">
+        <view class="wk pf pd12 tc t11 bg2">
+            <view class="c2">
+                周日
+            </view>
+            <view>
+                周一
+            </view>
+            <view>
+                周二
+            </view>
+            <view>
+                周三
+            </view>
+            <view>
+                周四
+            </view>
+            <view>
+                周五
+            </view>
+            <view class="c2">
+                周六
+            </view>
+        </view>
+        <scroll-view class="plc" scroll-y="true" style="height:{{scrollViewHeight}}px;" scroll-into-view="{{toView}}">
+            <view class="bb1 bgi oh" wx:for="{{dates}}" wx:for-item="items" wx:for-index="index" id="{{'toView_'+index}}">
+                <view class="mth tc">{{months[index]}}</view>
+                <view class="cic pd12">
+                    <view class="ej pl fl mb12 tc" wx:for="{{items}}" wx:for-item="item">
+                        <view class="day  {{item.classNames}}" data-classNames="{{item.classNames}}" data-value="{{item.value}}" data-day="{{item.day}}" bindtap="select">
+                            {{item.showDay}}
+                        </view>
+                        <view class="{{item.txt?'info':''}}" data-value="{{item.value}}" data-day="{{item.day}}" bindtap="select">{{item.txt}}</view>
+                        <!--                             <view class="{{item.work == '休'?'rest':'work1'}}" data-value="{{item.value}}" data-day="{{item.day}}" bindtap="select">{{item.work}}</view>
+ --></view>
+                </view>
+            </view>
+            <view class="vfd"></view>
+        </scroll-view>
+    </view>
+</view>

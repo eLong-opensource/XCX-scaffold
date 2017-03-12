@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="userinfo">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+    <view class="usermotto" bindtap="navigateToPartComponent">
+        <text class="user-motto">局部组件</text>
+    </view>
+    <view class="usermotto" bindtap="navigateToExternalComponent">
+        <text class="user-motto">独立组件</text>
+    </view>
+    <view class="usermotto" bindtap="navigateToInternalComponent">
+        <text class="user-motto">集成组件</text>
+    </view>
+    <view class="usermotto" bindtap="navigateToHttp">
+        <text class="user-motto">网络请求</text>
+    </view>
+</view>

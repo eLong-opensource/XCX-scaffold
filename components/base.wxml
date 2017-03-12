@@ -1,0 +1,16 @@
+<view wx:if="{{!__baseComponent__.picker.bghidden}}" class="picker_view" catchtap="{{__baseComponent__.picker._picker_hide}}">
+    <view class="picker_diy {{__baseComponent__.picker.hidden}}">
+        <view class="picker_header pl">
+            <label class="picker_right t13 fr dbi" catchtap="{{__baseComponent__.picker.bindcancel}}">{{__baseComponent__.picker.cancelText}}</label>
+            <label class="picker_title c4 pa tc dbi t16">{{__baseComponent__.picker.content}}</label>
+        </view>
+        <scroll-view class="" scroll-y="true" class="picker_scroll">
+            <view class="pl" wx:for="{{__baseComponent__.picker.data}}" wx:for-item="item">
+                <view class="picker_item t13 tc {{__baseComponent__.picker.init == index ? 'c1':''}}" data-picker-id="{{item.id}}" data-picker-index="{{index}}" catchtap="{{__baseComponent__.picker.bindtap}}">
+                    {{item.text}}
+                </view>
+                <view class="check pa arb" wx:if="{{__baseComponent__.picker.init == index}}"></view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

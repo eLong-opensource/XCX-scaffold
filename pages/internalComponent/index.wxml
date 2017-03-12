@@ -1,0 +1,30 @@
+<import src="filter/index.wxml" />
+<!-- 筛选器 -->
+<view class="hbv bar pf bb2 bg1">
+    <ul class="lst_ft">
+        <!-- 类别筛选 -->
+        <li class="aie c3 dbi fl pl t14 tc {{ openedFilter == 'typeFilter' ? 'on' : '' }}" bindtap="openFilter" data-filter-type="type">
+            <block wx:for="{{ filterData.type }}">
+                <span class="tit bl1" wx:if="{{ item.selected }}">
+          <!-- 类别名称 -->
+          <block>{{ item.name }}</block>
+
+          <!-- 类别数量 -->
+          <block>({{ hbListShow.length }})</block>
+        </span>
+            </block>
+        </li>
+
+        <!-- 分类筛选 -->
+        <li class="c3 dbi fl pl t14 tc {{ openedFilter == 'categoryFilter' ? 'on' : '' }}" bindtap="openFilter" data-filter-type="category">
+            <block wx:for="{{ filterData.category }}">
+                <span class="tit" wx:if="{{ item.selected }}">
+          <!-- 分类名称 -->
+          <block>{{ item.name }}</block>
+        </span>
+            </block>
+        </li>
+    </ul>
+</view>
+<template is="filter" data="{{ ...typeFilter }}" />
+<template is="filter" data="{{ ...categoryFilter }}" />

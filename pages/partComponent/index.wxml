@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="userinfo">
+        <text class="userinfo-nickname">{{current}}</text>
+    </view>
+    <view class="usermotto" bindtap="openPicker">
+        <button type="default" size="default" hover-class="other-button-hover"> 打开Picker </button>
+    </view>
+    <view bindtap="showLoading">
+        <button type="default" size="default" hover-class="other-button-hover"> {{loadingState ? 'hide loading' : 'show loading'}} </button>
+    </view>
+    <view bindtap="showModal">
+        <button type="default" size="default" hover-class="other-button-hover"> 弹框</button>
+    </view>
+    <include src="../../components/base.wxml" />
+</view>

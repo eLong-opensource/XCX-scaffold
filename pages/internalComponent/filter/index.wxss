@@ -1,0 +1,4 @@
+.st_mn .st_mnc .item{height: 45px;line-height: 45px;color: #747474;}
+.st_mn .st_mnc .item:last-child{border-bottom: none;}
+.st_mn .st_mnc .cur{color: #09bb07;}
+.st_mnc .cur .im_arr{width:16px;height:8px;top:13px;right:20px;border:1px solid #09bb07;border-width:0 0 1px 1px;transform:rotate(-45deg); -webkit-transform:rotate(-45deg);}

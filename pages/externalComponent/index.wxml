@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+    <text class="usermotto">{{date.indate}}-{{date.outdate}}</text>
+    <view class="usermotto" bindtap="openCalendar">
+        <button type="default" size="default" bindtap="getServerDate" hover-class="other-button-hover"> 选择日历 </button>
+    </view>
+</view>
